@@ -1,0 +1,47 @@
+{
+  "name": "aspect.js-poc",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "run-s test transpile",
+    "transpile": "tsc",
+    "compile": "npm run transpile",
+    "pile": "npm run transpile",
+    "unit": "mocha --require ts-node/register src/**/*.spec.ts",
+    "u": "npm run unit",
+    "test": "npm run unit",
+    "posttest": "npm run lint",
+    "lint": "run-p lint-ts lint-js",
+    "lint-ts": "tslint 'src/**/*.ts'",
+    "lint-js": "standard --verbose 'src/**/*.js'",
+    "format": "run-p format-ts format-js",
+    "format-ts": "tslint 'src/**/*.ts'",
+    "format-js": "standard --fix 'src/**/*.js'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aspect.js": "0.7.4",
+    "bluebird": "3.5.2",
+    "enumify": "1.0.4",
+    "lodash": "4.17.11",
+    "mutrait": "1.0.0-pre.9",
+    "uuid": "3.3.2",
+    "verror": "1.10.0"
+  },
+  "devDependencies": {
+    "@types/chai": "4.1.6",
+    "@types/mocha": "5.2.5",
+    "@types/node": "10.11.7",
+    "babel-eslint": "10.0.1",
+    "chai": "4.2.0",
+    "dirty-chai": "2.0.1",
+    "mocha": "5.2.0",
+    "npm-run-all": "4.1.3",
+    "standard": "12.0.1",
+    "ts-node": "7.0.1",
+    "tslint": "5.11.0",
+    "tslint-config-standard": "8.0.1",
+    "typescript": "3.1.1"
+  }
+}
